@@ -1,0 +1,16 @@
+Major
+===================================
+
+Minor
+===================================
+- Added gold exchange feature
+
+Patch
+===================================
+- Fixed loading
+- Changed the winning mechanisms
+- Added gold update
+- Fixed the rolling mechanisms
+- Updated the adding data features
+- Updated the update() function
+- Added reset functionality

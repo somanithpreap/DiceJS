@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DiceJS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <span id="dicejs">Dice<span style="color: red;font-weight: 700">JS</span></span>
+        <button class="exchange-btn" onclick="handlePopup()">Exchange</button>
+        <p id="cashText">Cash: <span id="cash">1000</span>$</p><br />
+        <p id="goldText">Gold: <span id="gold">0</span></p>
+        <div class="table">
+            <div id="tblDice1">?</div>
+            <div id="tblDice2">?</div>
+            <div id="tblDice3">?</div>
+        </div>
+        <div class="play">
+            <div class="dice1">
+                <h2>Dice 1</h1>
+                    <select id="dice1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+            </div>
+            <div class="dice2">
+                <h2>Dice 2</h1>
+                    <select id="dice2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+            </div>
+            <div class="dice3">
+                <h2>Dice 3</h1>
+                    <select id="dice3">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+            </div>
+            <div class="counter">
+                Cash Amount: <input type="number" value="0" id="cashPlay" /> Mode:
+                <select id="mode">
+                    <option value="2">x2</option>
+                    <option value="5">x5</option>
+                    <option value="10">x10</option>
+                    <option value="20">x20</option>
+                    <option value="50">x50</option>
+                    <option value="100">x100</option>
+                </select>
+                <button onclick="roll();">Roll</button>
+            </div>
+            <p id="reset" onclick="reset();" title="This will reset all of your data in the game!">Reset</p>
+        </div>
+    </div>
+    <div id="exchange-modal">
+        <span id="modal-title">Exchange<span class="close">&times;</span></span>
+        <div id="modal-body">
+            <p>1 Gold = 5000$</p>
+            Gold amount: <input type="number" step="1" pattern="[0-9]" value="0" id="exchange-gold" />
+            <button class="exchange-btn" style="float:unset;">Exchange</button>
+            <p>Exchanged cash: <span id="exchanged-cash">0</span>$</p>
+        </div>
+    </div>
+    <script src="dice.js"></script>
+</body>
+
+</html>
